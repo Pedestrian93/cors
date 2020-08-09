@@ -12,7 +12,10 @@ b.addEventListener("click", function () {
     });
 
   axios
-    .get("http://localhost:3001/user.json")
+    // .post("http://localhost:3001/user.json")
+    .post("http://localhost:3001/p", {
+      // headers: { SELF_HEADER: "xxx" },
+    })
     .then(function (response) {
       console.log(response.data);
     })
